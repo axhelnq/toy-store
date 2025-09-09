@@ -92,6 +92,7 @@ h6 {
 }
 
 /*--------------------*/
+
 body {
   min-height: 100%;
   overflow-x: hidden;
@@ -163,6 +164,7 @@ h6 {
 
 .header {
   height: 72px;
+  background: #F8F8F8;
 }
 
 .header .container {
@@ -181,6 +183,7 @@ h6 {
 .logo {
   font-size: 21px;
   font-family: Varela Round;
+  cursor: grab;
 }
 
 .header .logo {
@@ -205,17 +208,17 @@ h6 {
   text-decoration: underline;
 }
 
-.nav a {
+.nav button {
   font-family: Open Sans;
   font-style: normal;
   font-size: 14px;
 }
 
-.header nav a {
+.header nav button {
   color: #111;
 }
 
-.cart {
+.header__cart {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,19 +227,24 @@ h6 {
   cursor: pointer;
 }
 
-.cart * {
+.header__cart * {
   margin-right: 13px;
+  transition: transform .1s ease-in-out;
 }
 
-.cart span:hover {
+.header__cart *:hover {
+  transform: scale(1.05);
+}
+
+.header__cart span:hover {
   text-decoration: underline;
 }
 
-.cart img {
+.header__cart img {
   width: 24px;
 }
 
-.cart-count { /* todo коли 3-х значне число, не влізається в кружок */
+.cart__count { /* todo коли 3-х значне число, не влізається в кружок */
   background-color: #A5C926;
   padding: 6px;
   width: 20px;
@@ -258,7 +266,7 @@ h6 {
   align-items: center;
 }
 
-.hero-content {
+.hero__content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -281,7 +289,7 @@ h6 {
   margin-bottom: 17px;
 }
 
-.hero-content h1 {
+.hero__content h1 {
   font-size: 39px;
   width: 416px;
   margin-bottom: 20px;
@@ -296,7 +304,11 @@ h6 {
   border-radius: 24px;
 }
 
-.hero-content a:hover {
+.btn:hover {
+  text-decoration: underline;
+}
+
+.hero__content a:hover {
   text-decoration: underline;
 }
 
@@ -469,7 +481,7 @@ h6 {
   gap: 30px;
 }
 
-.card {
+.catalogue__card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,22 +495,22 @@ h6 {
   transform 0.2s ease-in-out;
 }
 
-.card:hover {
+.catalogue__card:hover {
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
   transform: translateY(-5px);
 }
 
-.card img {
+.catalogue__card img {
   margin-top: auto;
   margin-bottom: 25px;
 }
 
-.card h6 {
+.catalogue__card h6 {
   margin-bottom: 12px;
   font-size: 14px;
 }
 
-.card button {
+.catalogue__card button {
   padding: 2px 12px;
   color: #fff;
   background-color: #A5C926;
@@ -507,6 +519,10 @@ h6 {
   border-radius: 16px;
   line-height: 20px;
   margin-bottom: 32px;
+}
+
+.catalogue__card button:hover {
+  text-decoration: underline;
 }
 
 /* ----- promotional-video ----- */
@@ -627,7 +643,7 @@ h6 {
   width: 70px;
   height: 2px;
   border-bottom: 2px solid #A5C926;
-  transition: width .3s ease-in-out;
+  transition: width .3s ease;
 }
 
 .trial__body h3:hover::after {
@@ -641,16 +657,13 @@ h6 {
   line-height: 24px;
 }
 
-.trial_poster {
+.trial__poster {
 }
 
 .trial_poster img {
   width: 567px;
   height: 422px;
 }
-
-/* todo button acrive, hover animations */
-/* todo tabindex */
 
 /* ----- spam ----- */
 
@@ -691,9 +704,6 @@ h6 {
   color: #A5C926;
 }
 
-.spam__form {
-}
-
 .spam__form input {
   background-color: #F8F8F8;
   padding: 12px 29px;
@@ -702,9 +712,11 @@ h6 {
   border: 2px solid #E5E5E5;
   margin-right: 16px;
   font-size: 18px;
+  transition: all .3s ease;
 }
 
-.instagram {
+.spam__form input:focus {
+  border: 2px solid #b1b1b1;
 }
 
 .instagram .container {
@@ -736,6 +748,13 @@ h6 {
 .instagram__gallery img {
   width: 172px;
   height: 172px;
+  transition: box-shadow 0.2s ease-in-out,
+  transform 0.2s ease-in-out;
+}
+
+.instagram__gallery img:hover {
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.06);
+  transform: translateY(-5px);
 }
 
 /* ----- footer ----- */
@@ -761,19 +780,20 @@ h6 {
   width: 100%;
 }
 
-.footer__top .logo {}
-
 .footer__top .nav {
   color: #fff;
-
 }
 
 .footer__top ul {
   display: flex;
 }
 
-.footer nav a {
+.footer nav button {
   color: #fff;
+}
+
+.footer nav button:hover {
+  text-decoration: underline;
 }
 
 .footer__bottom {
@@ -817,4 +837,12 @@ h6 {
   content: "·";
   margin: 0 8px;
   color: #fff;
+}
+
+.footer__top ul li {
+  transition: transform .2s ease-in-out;
+}
+
+.footer__top ul li:hover {
+  transform: translateY(-2px)
 }

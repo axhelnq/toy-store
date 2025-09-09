@@ -8,7 +8,7 @@
   >
   <meta
     name="viewport"
-    content="width=device-width, initial-scale=1.0"
+    content="width=1230, initial-scale=1.0"
   >
   <title>ToyStore</title>
   <link
@@ -36,15 +36,17 @@
 </head>
 <body>
 
+<!-- todo sticky header -->
+
 <section class="top-bar">
   <div class="container">
     <address>
-      <a href="tel:+12139745898">Call Us: +1 213 974-5898</a>
-      <a href="mailto:toystore@template.com">Email: toystore@template.com</a>
+      <a href="tel:+12139745898" tabindex="1">Call Us: +1 213 974-5898</a>
+      <a href="mailto:toystore@template.com" tabindex="2">Email: toystore@template.com</a>
     </address>
     <ul>
       <li>
-        <a href="#">
+        <a href="#" tabindex="3">
           <img
             src="img/icons/twitter.svg"
             alt="twitter icon link"
@@ -52,7 +54,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="4">
           <img
             src="img/icons/facebook.svg"
             alt="facebook icon link"
@@ -60,7 +62,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="5">
           <img
             src="img/icons/instagram.svg"
             alt="instagram icon link"
@@ -68,7 +70,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="6">
           <img
             src="img/icons/pinterest.svg"
             alt="pinterest icon link"
@@ -76,7 +78,7 @@
         </a>
       </li>
       <li>
-        <a href="#">
+        <a href="#" tabindex="7">
           <img
             src="img/icons/youtube.svg"
             alt="youtube icon link"
@@ -94,300 +96,306 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="#">Catalog</a>
+            <button onclick="scrollToToyTypeEl()" tabindex="8">Catalog</button>
           </li>
           <li>
-            <a href="#">Delivery</a>
+            <button onclick="scrollToTrialEl()" tabindex="9">Delivery</button>
           </li>
           <li>
-            <a href="#">About</a>
+            <button onclick="scrollToInstagramEl()" tabindex="10">About</button>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <button onclick="scrollToTop()" tabindex="11">Contacts</button>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="cart">
+    <div class="header__cart cart" tabindex="12">
       <span>Cart</span>
       <img
         src="img/icons/cart.svg"
         alt="cart icon"
       >
-      <span class="cart-count">1</span>
+      <span class="cart__count">1</span>
     </div>
   </div>
 </header>
 
-<section class="hero">
-  <img
-    src="img/posters/IMAGE.jpg"
-    alt="Toys Background"
-    class="hero-bg"
-  >
-  <div class="hero-content">
-    <p class="subtitle">Say Hello to ToyStore!</p>
-    <h1>Free Ecommerce Template for Webflow</h1>
-    <a
-      href="#"
-      class="btn"
-    >Open Catalog
-    </a>
-  </div>
-</section>
-
-<section class="toy-type">
-  <div class="toy-type_stuffed stuffed">
+<main>
+  <section class="hero">
     <img
-      src="img/toys/IMAGE.png"
-      alt="Stuffed Animals"
+      src="img/posters/IMAGE.jpg"
+      alt="Toys Background"
     >
-    <div class="stuffed__body">
-      <h2 class="toy-type__title">Stuffed Animals</h2>
-      <a
-        class="toy-type__btn"
-        href="#"
+    <div class="hero__content">
+      <p class="subtitle">Say Hello to ToyStore!</p>
+      <h1>Free Ecommerce Template for Webflow</h1>
+      <button
+        onClick="scrollToToyTypeEl()"
+        class="btn"
+        tabindex="13"
       >
-        Shop Now
-        <!--   todo js scroll     -->
-      </a>
+        Open Catalog
+      </button>
     </div>
-  </div>
-  <div class="toy-type_wooden wooden">
-    <div class="wooden__body">
-      <h2 class="toy-type__title">Wooden Toys</h2>
-      <a
-        class="toy-type__btn"
-        href="#"
-      >
-        <!--   todo js scroll     -->
-        Shop Now
-      </a>
-    </div>
-    <img
-      src="img/toys/IMAGE-1.png"
-      alt="Wooden Toys"
-    >
-  </div>
-</section>
+  </section>
 
-<section
-  class="catalogue"
-  id="#catalogue__stuffed"
->
-  <div class="container">
-    <div class="catalogue__top">
-      <h3>Stuffed Animals</h3>
-      <a href="#">
-        <span>See All Toys</span>
-        <img
-          src="img/icons/arrow.svg"
-          alt="arrow icon"
-        >
-      </a>
-    </div>
-    <div class="catalogue__items">
-      <article class="card">
-        <img
-          src="img/toys/IMAGE.png"
-          alt="Teddy Bear photo"
-        >
-        <h6>Teddy Bear</h6>
-        <button>$ 30.00 USD</button>
-      </article>
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-4.png"
-          alt="Mega Plush Toy photo"
-        >
-        <h6>Mega Plush Toy</h6>
-        <button>$ 38.00 USD</button>
-      </article>
-
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-2.png"
-          alt="Cute Dog photo"
-        >
-        <h6>Cute Dog</h6>
-        <button>$ 24.00 USD</button>
-      </article>
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-3.png"
-          alt="Little Friend photo"
-        >
-        <h6>Little Friend</h6>
-        <button>$ 27.00 USD</button>
-      </article>
-
-    </div>
-  </div>
-</section>
-<section
-  class="catalogue"
-  id="#catalogue__wooden"
->
-  <div class="container">
-    <div class="catalogue__top">
-      <h3>Wooden Toys</h3>
-      <a href="#">
-        <span>See All Toys</span>
-        <img
-          src="img/icons/arrow.svg"
-          alt="arrow icon"
-        >
-      </a>
-    </div>
-    <div class="catalogue__items">
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-1.png"
-          alt="Happy Flower photo"
-        >
-        <h6>Happy Flower</h6>
-        <button>$ 38.00 USD</button>
-      </article>
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-7.png"
-          alt="Lift Machine photo"
-        >
-        <h6>Lift Machine</h6>
-        <button>$ 24.00 USD</button>
-      </article>
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-5.png"
-          alt="Wooden Camera photo"
-        >
-        <h6>Wooden Camera</h6>
-        <button>$ 32.00 USD</button>
-      </article>
-      <article class="card">
-        <img
-          src="img/toys/IMAGE-6.png"
-          alt="Little Rabbit photo"
-        >
-        <h6>Little Rabbit</h6>
-        <button>$ 16.00 USD</button>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section class="promotional-video">
-  <video
-    src="img/video/4931799_Person_People_3840x2160.mp4"
-    poster="img/posters/IMAGE-1.jpg"
-  ></video>
-  <div class="promotional-video__content">
-    <p>About The Shop</p>
-    <h3>Watch Our Story</h3>
-    <p class="promotional-video__desc">There is no magic formula to write perfect ad copy. It is based on a number of factors, including ad placement, demographic, even the consumer’s mood.</p>
-    <button>
-      <!--   todo зробити робочий плеєр на js   -->
+  <section class="toy-type">
+    <div class="toy-type__stuffed stuffed">
       <img
-        src="img/icons/play-btn.svg"
-        alt="play button"
+        src="img/toys/IMAGE.png"
+        alt="Stuffed Animals"
       >
-    </button>
-  </div>
-</section>
-
-<section class="trial">
-  <div class="container">
-    <div class="trial__top">
-      <p class="subtitle">Made for Webflow</p>
-      <h2>Simple & Colorful Ecommerce<br>Template for Your Business</h2>
+      <div class="stuffed__body">
+        <h2 class="toy-type__title">Stuffed Animals</h2>
+        <button
+          class="toy-type__btn"
+          onclick="scrollToStuffedEl()"
+          tabindex="14"
+        >
+          Shop Now
+        </button>
+      </div>
     </div>
-    <div class="trial__info">
-      <div class="trial__body">
-        <h3>Available for FREE!</h3>
-        <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy</p>
-        <a
-          href="#"
-          class="btn"
-        >GET IT NOW!
+    <div class="toy-type__wooden wooden">
+      <div class="wooden__body">
+        <h2 class="toy-type__title">Wooden Toys</h2>
+        <button
+          class="toy-type__btn"
+          onclick="scrollToWoodenEl()"
+          tabindex="15"
+        >
+          Shop Now
+        </button>
+      </div>
+      <img
+        src="img/toys/IMAGE-1.png"
+        alt="Wooden Toys"
+      >
+    </div>
+  </section>
+
+  <section
+    class="catalogue stuffed-catalogue"
+  >
+    <div class="container">
+      <div class="catalogue__top">
+        <h3>Stuffed Animals</h3>
+        <a href="#" tabindex="16">
+          <span >See All Toys</span>
+          <img
+            src="img/icons/arrow.svg"
+            alt="arrow icon"
+          >
         </a>
       </div>
-      <div class="trial_poster">
-        <img
-          src="img/posters/IMAGE-2.png"
-          alt="poster image"
-        >
+      <div class="catalogue__items">
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE.png"
+            alt="Teddy Bear photo"
+          >
+          <h6>Teddy Bear</h6>
+          <button>$ 30.00 USD</button>
+        </article>
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-4.png"
+            alt="Mega Plush Toy photo"
+          >
+          <h6>Mega Plush Toy</h6>
+          <button>$ 38.00 USD</button>
+        </article>
+
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-2.png"
+            alt="Cute Dog photo"
+          >
+          <h6>Cute Dog</h6>
+          <button>$ 24.00 USD</button>
+        </article>
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-3.png"
+            alt="Little Friend photo"
+          >
+          <h6>Little Friend</h6>
+          <button>$ 27.00 USD</button>
+        </article>
+
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="spam">
-  <div class="container">
-    <div class="spam__body">
-      <img
-        width="24"
-        src="img/icons/mail-ico.svg"
-        alt="newsletter icon"
-      >
-      <p>Subscribe to our newsletter<br>& get <span>10% discount!</span></p>
+  <section
+    class="catalogue wooden-catalogue"
+  >
+    <div class="container">
+      <div class="catalogue__top">
+        <h3>Wooden Toys</h3>
+        <a href="#" tabindex="17">
+          <span>See All Toys</span>
+          <img
+            src="img/icons/arrow.svg"
+            alt="arrow icon"
+          >
+        </a>
+      </div>
+      <div class="catalogue__items">
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-1.png"
+            alt="Happy Flower photo"
+          >
+          <h6>Happy Flower</h6>
+          <button>$ 38.00 USD</button>
+        </article>
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-7.png"
+            alt="Lift Machine photo"
+          >
+          <h6>Lift Machine</h6>
+          <button>$ 24.00 USD</button>
+        </article>
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-5.png"
+            alt="Wooden Camera photo"
+          >
+          <h6>Wooden Camera</h6>
+          <button>$ 32.00 USD</button>
+        </article>
+        <article class="catalogue__card">
+          <img
+            src="img/toys/IMAGE-6.png"
+            alt="Little Rabbit photo"
+          >
+          <h6>Little Rabbit</h6>
+          <button>$ 16.00 USD</button>
+        </article>
+      </div>
     </div>
-    <form
-      action="POST"
-      class="spam__form"
-    >
-      <input
-        type="email"
-        name="email"
-      >
-      <!--   todo e-mail validation   -->
-      <button
-        type="submit"
-        class="btn"
-      >Subscribe
+  </section>
+
+  <section class="promotional-video">
+    <video
+      src="img/video/4931799_Person_People_3840x2160.mp4"
+      poster="img/posters/IMAGE-1.jpg"
+    ></video>
+    <div class="promotional-video__content">
+      <p>About The Shop</p>
+      <h3>Watch Our Story</h3>
+      <p class="promotional-video__desc">There is no magic formula to write perfect ad copy. It is based on a number of factors, including ad placement, demographic, even the consumer’s mood.</p>
+      <button tabindex="18">
+        <!--   todo зробити робочий плеєр на js   -->
+        <img
+          src="img/icons/play-btn.svg"
+          alt="play button"
+        >
       </button>
-
-    </form>
-  </div>
-</section>
-
-<section class="instagram">
-  <div class="container">
-    <p class="subtitle">@ElasticThemes</p>
-    <h3>We're on Instagram!</h3>
-    <div class="instagram__gallery">
-      <img
-        src="img/toys/IMAGE-8.png"
-        alt="photo of instagram post"
-      >
-      <img
-        src="img/toys/IMAGE-11.png"
-        alt="photo of instagram post"
-      >
-      <img
-        src="img/toys/IMAGE-9.png"
-        alt="photo of instagram post"
-      >
-      <img
-        src="img/toys/IMAGE-13.png"
-        alt="photo of instagram post"
-      >
-      <img
-        src="img/toys/IMAGE-10.png"
-        alt="photo of instagram post"
-      >
-      <img
-        src="img/toys/IMAGE-12.png"
-        alt="photo of instagram post"
-      >
     </div>
-    <a
-      href="#"
-      class="btn"
-    >
-      See More Photos
-    </a>
-  </div>
-</section>
+  </section>
+
+  <section class="trial">
+    <div class="container">
+      <div class="trial__top">
+        <p class="subtitle">Made for Webflow</p>
+        <h2>Simple & Colorful Ecommerce<br>Template for Your Business</h2>
+      </div>
+      <div class="trial__info">
+        <div class="trial__body">
+          <h3>Available for FREE!</h3>
+          <p>A successful marketing plan relies heavily on the pulling-power of advertising copy. Writing result-oriented ad copy is difficult, as it must appeal to, entice, and convince consumers to take action. There is no magic formula to write perfect ad copy</p>
+          <a
+            href="#"
+            class="btn"
+            tabindex="19"
+          >GET IT NOW!
+          </a>
+        </div>
+        <div class="trial__poster">
+          <img
+            src="img/posters/IMAGE-2.png"
+            alt="poster image"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spam">
+    <div class="container">
+      <div class="spam__body">
+        <img
+          width="24"
+          src="img/icons/mail-ico.svg"
+          alt="newsletter icon"
+        >
+        <p>Subscribe to our newsletter<br>& get <span>10% discount!</span></p>
+      </div>
+      <form
+        action="POST"
+        class="spam__form"
+      >
+        <input
+          type="email"
+          name="email"
+          required
+          tabindex="20"
+        >
+        <button
+          type="submit"
+          class="btn"
+          tabindex="21"
+        >Subscribe
+        </button>
+
+      </form>
+    </div>
+  </section>
+
+  <section class="instagram">
+    <div class="container">
+      <p class="subtitle">@ElasticThemes</p>
+      <h3>We're on Instagram!</h3>
+      <div class="instagram__gallery">
+        <img
+          src="img/toys/IMAGE-8.png"
+          alt="photo of instagram post"
+        >
+        <img
+          src="img/toys/IMAGE-11.png"
+          alt="photo of instagram post"
+        >
+        <img
+          src="img/toys/IMAGE-9.png"
+          alt="photo of instagram post"
+        >
+        <img
+          src="img/toys/IMAGE-13.png"
+          alt="photo of instagram post"
+        >
+        <img
+          src="img/toys/IMAGE-10.png"
+          alt="photo of instagram post"
+        >
+        <img
+          src="img/toys/IMAGE-12.png"
+          alt="photo of instagram post"
+        >
+      </div>
+      <a
+        href="#"
+        class="btn"
+        tabindex="22"
+      >
+        See More Photos
+      </a>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -396,25 +404,25 @@
       <nav class="nav">
         <ul>
           <li>
-            <a href="#">Home</a>
+            <button onclick="scrollToTop()" tabindex="23">Home</button>
           </li>
           <li>
-            <a href="#">Catalog</a>
+            <button onclick="scrollToToyTypeEl()" tabindex="24">Catalog</button>
           </li>
           <li>
-            <a href="#">Delivery</a>
+            <button onclick="scrollToTrialEl()" tabindex="25">Delivery</button>
           </li>
           <li>
-            <a href="#">About</a>
+            <button onclick="scrollToInstagramEl()" tabindex="26">About</button>
           </li>
           <li>
-            <a href="#">Contacts</a>
+            <button onclick="scrollToTop()" tabindex="27">Contacts</button>
           </li>
         </ul>
       </nav>
       <ul>
         <li>
-          <a href="#">
+          <a href="#" tabindex="28">
             <img
               src="img/icons/twitter.svg"
               alt="twitter icon link"
@@ -422,7 +430,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" tabindex="29">
             <img
               src="img/icons/facebook.svg"
               alt="facebook icon link"
@@ -430,7 +438,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" tabindex="30">
             <img
               src="img/icons/instagram.svg"
               alt="instagram icon link"
@@ -438,7 +446,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" tabindex="31">
             <img
               src="img/icons/pinterest.svg"
               alt="pinterest icon link"
@@ -446,7 +454,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="#" tabindex="32">
             <img
               src="img/icons/youtube.svg"
               alt="youtube icon link"
@@ -459,13 +467,14 @@
       <p class="footer__creator">Created with love by Elastic Themes</p>
       <p class="footer__powered-by">
         Powered by
-        <a href="#"><span>Webflow</span></a>
-        <a href="#"><span>Style Guide</span></a>
-        <a href="#"><span>Licensing</span></a>
+        <a href="#" tabindex="33"><span>Webflow</span></a>
+        <a href="#" tabindex="34"><span>Style Guide</span></a>
+        <a href="#" tabindex="35"><span>Licensing</span></a>
       </p>
     </div>
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
