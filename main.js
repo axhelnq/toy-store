@@ -47,3 +47,18 @@ const scrollToTrialEl = () => {
     behavior: 'smooth'
   })
 }
+
+const cartCountEl = document.querySelector('.cart__count');
+let cartCount = 0;
+cartCountEl.innerHTML = cartCount;
+
+const addItemToCart = () => {
+  cartCount++;
+  cartCountEl.innerHTML = cartCount;
+};
+
+const catalogueElsBtns = document.querySelectorAll('.catalogue button');
+
+catalogueElsBtns.forEach(btn => {
+  btn.addEventListener('click', () => addItemToCart());
+});

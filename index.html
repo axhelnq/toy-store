@@ -35,9 +35,6 @@
   >
 </head>
 <body>
-
-<!-- todo sticky header -->
-
 <section class="top-bar">
   <div class="container">
     <address>
@@ -88,7 +85,6 @@
     </ul>
   </div>
 </section>
-
 <header class="header">
   <div class="container">
     <div class="header__left">
@@ -120,7 +116,6 @@
     </div>
   </div>
 </header>
-
 <main>
   <section class="hero">
     <img
@@ -139,7 +134,6 @@
       </button>
     </div>
   </section>
-
   <section class="toy-type">
     <div class="toy-type__stuffed stuffed">
       <img
@@ -174,7 +168,6 @@
       >
     </div>
   </section>
-
   <section
     class="catalogue stuffed-catalogue"
   >
@@ -227,7 +220,6 @@
       </div>
     </div>
   </section>
-
   <section
     class="catalogue wooden-catalogue"
   >
@@ -278,26 +270,23 @@
       </div>
     </div>
   </section>
-
   <section class="promotional-video">
-    <video
-      src="img/video/4931799_Person_People_3840x2160.mp4"
-      poster="img/posters/IMAGE-1.jpg"
-    ></video>
+    <img
+      src="img/posters/IMAGE-1.jpg"
+      alt="video preview"
+    >
     <div class="promotional-video__content">
       <p>About The Shop</p>
       <h3>Watch Our Story</h3>
       <p class="promotional-video__desc">There is no magic formula to write perfect ad copy. It is based on a number of factors, including ad placement, demographic, even the consumer’s mood.</p>
-      <button tabindex="18">
-        <!--   todo зробити робочий плеєр на js   -->
+      <a tabindex="18" href="https://youtube.com" target="_blank">
         <img
           src="img/icons/play-btn.svg"
-          alt="play button"
+          alt="play button link"
         >
-      </button>
+      </a>
     </div>
   </section>
-
   <section class="trial">
     <div class="container">
       <div class="trial__top">
@@ -324,7 +313,6 @@
       </div>
     </div>
   </section>
-
   <section class="spam">
     <div class="container">
       <div class="spam__body">
@@ -344,6 +332,7 @@
           name="email"
           required
           tabindex="20"
+          placeholder="yourMail@example.com"
         >
         <button
           type="submit"
@@ -355,7 +344,6 @@
       </form>
     </div>
   </section>
-
   <section class="instagram">
     <div class="container">
       <p class="subtitle">@ElasticThemes</p>
@@ -396,7 +384,6 @@
     </div>
   </section>
 </main>
-
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
@@ -474,7 +461,6 @@
     </div>
   </div>
 </footer>
-
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 </body>
 </html>

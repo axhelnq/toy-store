@@ -95,10 +95,11 @@ h6 {
 
 body {
   min-height: 100%;
-  overflow-x: hidden;
   font-family: Varela Round;
   color: #111;
   background: #F8F8F8;
+  position: relative;
+  overflow-x: hidden;
 }
 
 .container {
@@ -123,6 +124,7 @@ h6 {
 .top-bar {
   background-color: #A5C926;
   height: 32px;
+  margin-top: 72px;
 }
 
 .top-bar .container {
@@ -165,6 +167,11 @@ h6 {
 .header {
   height: 72px;
   background: #F8F8F8;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid #E5E5E5;
 }
 
 .header .container {
@@ -244,7 +251,7 @@ h6 {
   width: 24px;
 }
 
-.cart__count { /* todo коли 3-х значне число, не влізається в кружок */
+.cart__count {
   background-color: #A5C926;
   padding: 6px;
   width: 20px;
@@ -567,18 +574,18 @@ h6 {
   margin-bottom: 18px;
 }
 
-.promotional-video__content button {
+.promotional-video__content a {
   padding: 23px;
   background-color: #A5C926;
   width: 63px;
   transition: box-shadow .1s ease-in-out, transform .05s ease-in-out;
 }
 
-.promotional-video__content button:hover {
+.promotional-video__content a:hover {
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
 }
 
-.promotional-video__content button:active {
+.promotional-video__content a:active {
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   transform: scale(0.97);
 }
@@ -713,6 +720,10 @@ h6 {
   margin-right: 16px;
   font-size: 18px;
   transition: all .3s ease;
+}
+
+.spam__form input::placeholder {
+  color: #b1b1b1;
 }
 
 .spam__form input:focus {
